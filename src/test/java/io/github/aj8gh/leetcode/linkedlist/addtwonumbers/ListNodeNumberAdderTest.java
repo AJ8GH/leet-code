@@ -1,4 +1,4 @@
-package io.github.aj8gh.leetcode.listnode;
+package io.github.aj8gh.leetcode.linkedlist.addtwonumbers;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,18 +8,18 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-class ListNodeSolutionTest {
-  private Solution solution;
+class ListNodeNumberAdderTest {
+  private NumberAdder numberAdder;
 
   @BeforeEach
   void setUp() {
-    solution = new Solution();
+    numberAdder = new NumberAdder();
   }
 
   @ParameterizedTest
   @MethodSource("inputProvider")
   void addTwoNumbers(ListNode l1, ListNode l2, ListNode expected) {
-    var actual = solution.addTwoNumbers(l1, l2);
+    var actual = numberAdder.addTwoNumbers(l1, l2);
     assertEquals(expected, actual);
   }
 

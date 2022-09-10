@@ -1,10 +1,10 @@
-package io.github.aj8gh.leetcode.listnode;
+package io.github.aj8gh.leetcode.linkedlist.addtwonumbers;
 
 public class ListNode {
   int val;
   ListNode next;
 
-  ListNode() {
+  public ListNode() {
   }
 
   ListNode(int val) {

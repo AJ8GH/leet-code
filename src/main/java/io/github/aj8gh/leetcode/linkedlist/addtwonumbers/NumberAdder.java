@@ -1,6 +1,6 @@
-package io.github.aj8gh.leetcode.listnode;
+package io.github.aj8gh.leetcode.linkedlist.addtwonumbers;
 
-class Solution {
+class NumberAdder {
   public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
     ListNode node = new ListNode();
     ListNode currentNode = null;
