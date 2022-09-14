@@ -3,25 +3,26 @@ package io.github.aj8gh.leetcode.algoi;
 public class BadVersionChecker extends VersionControl {
 
   public int firstBadVersion(int n) {
-    int firstBadVersion = 0;
-    int upper;
-    int lower;
+    var isBadVersion = isBadVersion(n);
+    if (isBadVersion && !isBadVersion(n -1)) {
+      return n;
+    }
+    int upper = isBadVersion ? n : Integer.MAX_VALUE;
+    int lower = isBadVersion ? 0 : n;
 
-    do {
-      if (isBadVersion(n)) {
-        if (isBadVersion(n - 1)) {
-          return n - 1;
+    while (upper - lower > 1) {
+      int mid = lower + ((upper - lower) / 2);
+
+      if (isBadVersion(mid)) {
+        if (!isBadVersion(mid - 1)) {
+          return mid;
         }
-        firstBadVersion = n;
-        upper = n;
-        lower = n / 2;
+        upper = mid;
       } else {
-        upper = n * 2;
-        lower = n;
+        lower = mid;
       }
-      n = lower + ((upper - lower) / 2);
-    } while (upper - lower > 1);
-    return firstBadVersion;
+    }
+    return -1;
   }
 
   @Override

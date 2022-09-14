@@ -15,7 +15,9 @@ class BadVersionCheckerTest {
   private static Stream<Arguments> inputProvider() {
     return Stream.of(
         Arguments.of(5, 4),
-        Arguments.of(1, 1)
+        Arguments.of(1, 1),
+        Arguments.of(3, 1),
+        Arguments.of(2126753390, 1702766719)
     );
   }
 
@@ -26,7 +28,7 @@ class BadVersionCheckerTest {
 
   @ParameterizedTest
   @MethodSource("inputProvider")
-  void search(int n, int badVersion) {
+  void firstBadVersion(int n, int badVersion) {
     badVersionChecker.setBadVersion(badVersion);
     var actualOutput = badVersionChecker.firstBadVersion(n);
     assertEquals(badVersion, actualOutput);

@@ -1,9 +1,10 @@
-package io.github.aj8gh.leetcode.treenode;
+package io.github.aj8gh.leetcode.binarytree.inordertraversal;
 
+import io.github.aj8gh.leetcode.binarytree.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
-class Solution {
+class Traverser {
   private final List<Integer> values = new ArrayList<>();
 
   public List<Integer> inorderTraversal(TreeNode root) {

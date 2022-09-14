@@ -2,26 +2,16 @@ package io.github.aj8gh.leetcode.linkedlist.addtwonumbers;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import io.github.aj8gh.leetcode.linkedlist.AbstractListNodeTest;
+import io.github.aj8gh.leetcode.linkedlist.ListNode;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-class ListNodeNumberAdderTest {
+class ListNodeNumberAdderTest extends AbstractListNodeTest {
   private NumberAdder numberAdder;
-
-  @BeforeEach
-  void setUp() {
-    numberAdder = new NumberAdder();
-  }
-
-  @ParameterizedTest
-  @MethodSource("inputProvider")
-  void addTwoNumbers(ListNode l1, ListNode l2, ListNode expected) {
-    var actual = numberAdder.addTwoNumbers(l1, l2);
-    assertEquals(expected, actual);
-  }
 
   private static Stream<Arguments> inputProvider() {
     return Stream.of(
@@ -43,16 +33,15 @@ class ListNodeNumberAdderTest {
     );
   }
 
-  private static ListNode toListNode(int... digits) {
-    ListNode node = new ListNode();
-    ListNode currentNode = node;
-    for (int i = 0; i < digits.length; i++) {
-      currentNode.val = digits[i];
-      if (i < digits.length - 1) {
-        currentNode.next = new ListNode();
-        currentNode = currentNode.next;
-      }
-    }
-    return node;
+  @BeforeEach
+  void setUp() {
+    numberAdder = new NumberAdder();
+  }
+
+  @ParameterizedTest
+  @MethodSource("inputProvider")
+  void addTwoNumbers(ListNode l1, ListNode l2, ListNode expected) {
+    var actual = numberAdder.addTwoNumbers(l1, l2);
+    assertEquals(expected, actual);
   }
 }
