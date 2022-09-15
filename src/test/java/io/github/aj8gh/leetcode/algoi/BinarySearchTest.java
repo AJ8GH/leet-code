@@ -2,6 +2,7 @@ package io.github.aj8gh.leetcode.algoi;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import io.github.aj8gh.leetcode.algos.algoi.BinarySearch;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;

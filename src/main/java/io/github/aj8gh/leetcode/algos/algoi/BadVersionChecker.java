@@ -1,4 +1,4 @@
-package io.github.aj8gh.leetcode.algoi;
+package io.github.aj8gh.leetcode.algos.algoi;
 
 public class BadVersionChecker extends VersionControl {
 
