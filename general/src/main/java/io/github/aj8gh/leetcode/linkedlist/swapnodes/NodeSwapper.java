@@ -1,6 +1,6 @@
 package io.github.aj8gh.leetcode.linkedlist.swapnodes;
 
-import io.github.aj8gh.leetcode.linkedlist.ListNode;
+import io.github.aj8gh.leetcode.domain.ListNode;
 import java.util.ArrayList;
 
 public class NodeSwapper {

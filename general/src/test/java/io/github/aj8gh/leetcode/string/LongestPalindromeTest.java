@@ -1,4 +1,4 @@
-package io.github.aj8gh.leetcode.substring;
+package io.github.aj8gh.leetcode.string;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

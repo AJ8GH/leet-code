@@ -1,9 +1,8 @@
-package io.github.aj8gh.leetcode.substring;
+package io.github.aj8gh.leetcode.algo.track1.day6;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.stream.Stream;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -24,12 +23,11 @@ class LongestSubStringTest {
     );
   }
 
-  @Disabled
   @ParameterizedTest
   @MethodSource("inputProvider")
-  void lengthOfLongestSubString(String input, int expectedLength) {
+  void lengthOfLongestSubString(String input, int expected) {
     var longestSubString = new LongestSubString();
-    var actualLength = longestSubString.lengthOfLongestSubstring(input);
-    assertEquals(expectedLength, actualLength);
+    var actual = longestSubString.lengthOfLongestSubstring(input);
+    assertEquals(expected, actual);
   }
 }

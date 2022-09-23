@@ -1,4 +1,4 @@
-package io.github.aj8gh.leetcode.linkedlist;
+package io.github.aj8gh.leetcode.domain;
 
 public class ListNode {
   public int val;

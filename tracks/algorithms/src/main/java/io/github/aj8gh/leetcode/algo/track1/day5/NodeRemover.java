@@ -1,6 +1,6 @@
-package io.github.aj8gh.leetcode.linkedlist.removenthnode;
+package io.github.aj8gh.leetcode.algo.track1.day5;
 
-import io.github.aj8gh.leetcode.linkedlist.ListNode;
+import io.github.aj8gh.leetcode.domain.ListNode;
 import java.util.ArrayList;
 
 public class NodeRemover {

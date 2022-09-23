@@ -1,7 +1,8 @@
-package io.github.aj8gh.leetcode.linkedlist;
+package io.github.aj8gh.leetcode.test;
 
-public abstract class AbstractListNodeTest {
+import io.github.aj8gh.leetcode.domain.ListNode;
 
+public class AbstractListNodeTest {
   protected static ListNode toListNode(int... digits) {
     if (digits.length == 0) {
       return null;

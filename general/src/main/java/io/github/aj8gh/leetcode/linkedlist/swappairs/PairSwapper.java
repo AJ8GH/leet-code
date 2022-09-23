@@ -1,6 +1,6 @@
 package io.github.aj8gh.leetcode.linkedlist.swappairs;
 
-import io.github.aj8gh.leetcode.linkedlist.ListNode;
+import io.github.aj8gh.leetcode.domain.ListNode;
 
 public class PairSwapper {
   public ListNode swapPairs(ListNode head) {

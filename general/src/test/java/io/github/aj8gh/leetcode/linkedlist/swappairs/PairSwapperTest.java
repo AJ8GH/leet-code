@@ -2,8 +2,8 @@ package io.github.aj8gh.leetcode.linkedlist.swappairs;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import io.github.aj8gh.leetcode.linkedlist.AbstractListNodeTest;
-import io.github.aj8gh.leetcode.linkedlist.ListNode;
+import io.github.aj8gh.leetcode.domain.ListNode;
+import io.github.aj8gh.leetcode.test.AbstractListNodeTest;
 import java.util.stream.Stream;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
