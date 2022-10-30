@@ -1,12 +1,8 @@
 package io.github.aj8gh.leetcode.binarytree.validbst;
 
-import io.github.aj8gh.leetcode.binarytree.TreeNode;
+import io.github.aj8gh.leetcode.domain.TreeNode;
 
 public class BstValidator {
-  private TreeNode originalRoot;
-  private int minRight;
-  private int maxLeft;
-
   public boolean isValidBst(TreeNode root) {
     if (getMinRight(root) > root.val) {
       return false;

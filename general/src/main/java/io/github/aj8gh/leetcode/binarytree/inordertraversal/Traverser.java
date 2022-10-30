@@ -1,6 +1,6 @@
 package io.github.aj8gh.leetcode.binarytree.inordertraversal;
 
-import io.github.aj8gh.leetcode.binarytree.TreeNode;
+import io.github.aj8gh.leetcode.domain.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 

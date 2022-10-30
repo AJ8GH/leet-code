@@ -2,7 +2,7 @@ package io.github.aj8gh.leetcode.binarytree.validbst;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import io.github.aj8gh.leetcode.binarytree.TreeNode;
+import io.github.aj8gh.leetcode.domain.TreeNode;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
