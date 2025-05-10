@@ -3,8 +3,11 @@ package io.github.aj8gh.leetcode.linkedlist.swappairs;
 import io.github.aj8gh.leetcode.domain.ListNode;
 
 public class PairSwapper {
+
   public ListNode swapPairs(ListNode head) {
-    if (head == null || head.next == null) return head;
+    if (head == null || head.next == null) {
+      return head;
+    }
     var current = head;
     var nodeToReturn = head.next;
     ListNode previous = null;

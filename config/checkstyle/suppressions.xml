@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<!DOCTYPE suppressions PUBLIC
+  "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+  "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+  <suppress
+    checks="SummaryJavadoc|MissingJavadocType|MissingJavadocMethod|NonEmptyAtcClauseDescription|JavadocParagraph|JavadocPackage|JavadocVariable"
+    files="."
+  />
+  <suppress checks="AbbreviationAsWordInName" files="MergeKSortedLists.java" />
+  <suppress checks="AbbreviationAsWordInName" files="NodeSwapper.java" />
+  <suppress checks="LineLength" files="MinWindowTest.java" />
+</suppressions>

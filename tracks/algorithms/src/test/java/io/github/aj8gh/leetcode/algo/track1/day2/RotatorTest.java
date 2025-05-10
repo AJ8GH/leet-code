@@ -11,10 +11,10 @@ class RotatorTest {
 
   private static Stream<Arguments> inputProvider() {
     return Stream.of(
-        Arguments.of(new int[]{1, 2, 3, 4, 5, 6, 7}, 1, new int[]{7, 1, 2, 3, 4, 5, 6}),
-        Arguments.of(new int[]{1, 2, 3, 4, 5, 6, 7}, 2, new int[]{6, 7, 1, 2, 3, 4, 5}),
-        Arguments.of(new int[]{1, 2, 3, 4, 5, 6, 7}, 3, new int[]{5, 6, 7, 1, 2, 3, 4}),
-        Arguments.of(new int[]{-1, -100, 3, 99}, 2, new int[]{3, 99, -1, -100})
+        Arguments.of(new int[] {1, 2, 3, 4, 5, 6, 7}, 1, new int[] {7, 1, 2, 3, 4, 5, 6}),
+        Arguments.of(new int[] {1, 2, 3, 4, 5, 6, 7}, 2, new int[] {6, 7, 1, 2, 3, 4, 5}),
+        Arguments.of(new int[] {1, 2, 3, 4, 5, 6, 7}, 3, new int[] {5, 6, 7, 1, 2, 3, 4}),
+        Arguments.of(new int[] {-1, -100, 3, 99}, 2, new int[] {3, 99, -1, -100})
     );
   }
 

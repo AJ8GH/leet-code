@@ -8,41 +8,42 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 class MedianArrayTest {
+
   private static Stream<Arguments> inputProvider() {
     return Stream.of(
         Arguments.of(
-            new int[]{1, 3},
-            new int[]{2},
+            new int[] {1, 3},
+            new int[] {2},
             2.0
         ),
         Arguments.of(
-            new int[]{1, 2},
-            new int[]{3, 4},
+            new int[] {1, 2},
+            new int[] {3, 4},
             2.5
         ),
         Arguments.of(
-            new int[]{1, 2},
-            new int[]{1, 2, 3},
+            new int[] {1, 2},
+            new int[] {1, 2, 3},
             2.0
         ),
         Arguments.of(
-            new int[]{},
-            new int[]{1},
+            new int[] {},
+            new int[] {1},
             1.0
         ),
         Arguments.of(
-            new int[]{},
-            new int[]{2, 3},
+            new int[] {},
+            new int[] {2, 3},
             2.5
         ),
         Arguments.of(
-            new int[]{100001},
-            new int[]{100000},
+            new int[] {100001},
+            new int[] {100000},
             100000.5
         ),
         Arguments.of(
-            new int[]{2, 3, 4},
-            new int[]{1},
+            new int[] {2, 3, 4},
+            new int[] {1},
             2.5
         )
     );

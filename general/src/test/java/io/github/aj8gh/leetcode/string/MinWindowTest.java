@@ -8,6 +8,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 class MinWindowTest {
+
   private static Stream<Arguments> inputProvider() {
     return Stream.of(
         Arguments.of("ADOBECODEBANC", "ABC", "BANC"),

@@ -10,16 +10,17 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 @Disabled
 class RottingOrangesTest {
+
   private static Stream<Arguments> inputProvider() {
     return Stream.of(
         Arguments.of(
-            new int[][]{{2, 1, 1}, {1, 1, 0}, {0, 1, 1}},
+            new int[][] {{2, 1, 1}, {1, 1, 0}, {0, 1, 1}},
             4),
         Arguments.of(
-            new int[][]{{2, 1, 1}, {0, 1, 1}, {1, 0, 1}},
+            new int[][] {{2, 1, 1}, {0, 1, 1}, {1, 0, 1}},
             -1),
         Arguments.of(
-            new int[][]{{0, 2}},
+            new int[][] {{0, 2}},
             0)
     );
   }

@@ -31,7 +31,7 @@ public class Matrix {
     queueNeighbours(i, j, mat);
     int distance = 1;
 
-    while(!queue.isEmpty()) {
+    while (!queue.isEmpty()) {
       var nodesToExplore = new ArrayList<int[]>();
 
       while (!queue.isEmpty()) {
@@ -56,7 +56,7 @@ public class Matrix {
       return;
     }
     visited[i][j] = true;
-    var neighbours = new int[][]{
+    var neighbours = new int[][] {
         {i, j + 1},
         {i + 1, j},
         {i, j - 1},

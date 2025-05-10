@@ -4,6 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Arrays;
 
 public class MedianArray {
+
   public double findMedianSortedArrays(int[] nums1, int[] nums2) {
     int[] numsMerge = new int[nums1.length + nums2.length];
 
@@ -82,19 +83,19 @@ public class MedianArray {
     int medianIndex = (nums1.length + nums2.length) / 2;
     int i = 0;
     int j = 0;
-    boolean iWasLastIncrement;
+    boolean isIthLastIncrement;
 
     while (i < nums1.length || j < nums2.length) {
       if (i >= nums1.length || nums2[j] < nums1[i]) {
         j++;
-        iWasLastIncrement = false;
+        isIthLastIncrement = false;
       } else {
         i++;
-        iWasLastIncrement = true;
+        isIthLastIncrement = true;
       }
       if (i + j == medianIndex) {
         if ((nums1.length + nums2.length) % 2 == 0) {
-          return ((iWasLastIncrement ? nums1[i - 1] : nums2[j - 1])
+          return ((isIthLastIncrement ? nums1[i - 1] : nums2[j - 1])
               + getNextElement(i, j, nums1, nums2)) / 2.0;
         } else {
           return getNextElement(i, j, nums1, nums2);

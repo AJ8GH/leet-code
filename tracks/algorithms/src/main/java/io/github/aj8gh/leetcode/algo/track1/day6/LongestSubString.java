@@ -3,6 +3,7 @@ package io.github.aj8gh.leetcode.algo.track1.day6;
 import java.util.HashMap;
 
 public class LongestSubString {
+
   public int lengthOfLongestSubstring(String s) {
     if (s.isEmpty()) {
       return 0;

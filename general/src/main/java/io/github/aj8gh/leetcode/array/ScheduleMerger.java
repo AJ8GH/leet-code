@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ScheduleMerger {
+
   public int[][] process(int[][] input) {
     List<int[]> ranges = new ArrayList<>();
 
@@ -43,8 +44,6 @@ public class ScheduleMerger {
 //                   19-----------30
 //This would output:
 //1------8     12------------------30    35-----40
-
-
 
 // [[1, 8], [3, 6]....]
 /*

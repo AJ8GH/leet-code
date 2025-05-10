@@ -1,6 +1,7 @@
 package io.github.aj8gh.leetcode.algo.track1.day3;
 
 public class ZeroMover {
+
   public void moveZeroes(int[] nums) {
     for (int i = 0; i < nums.length; i++) {
       int j = i + 1;

@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TwoSummer {
+
   private final Map<Integer, Integer> map = new HashMap<>();
 
   public int[] twoSum(int[] numbers, int target) {

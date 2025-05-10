@@ -3,6 +3,7 @@ package io.github.aj8gh.leetcode.algo.track1.day4;
 import java.util.Arrays;
 
 public class WordReverser {
+
   public String reverseWords(String s) {
     var words = s.split(" ");
 

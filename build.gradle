@@ -1,0 +1,17 @@
+plugins {
+  id 'java'
+  id 'jacoco-report-aggregation'
+  id 'jacoco'
+  id 'checkstyle'
+//  id 'org.kordamp.gradle.jandex'
+}
+
+apply from: jacocoBuildScript
+apply from: allProjectsBuildScript
+apply from: subProjectsBuildScript
+
+dependencies {
+  implementation project(generalModule)
+  implementation project(tracksModule)
+  implementation project(utilModule)
+}

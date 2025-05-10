@@ -4,6 +4,7 @@ import io.github.aj8gh.leetcode.domain.ListNode;
 import java.util.ArrayList;
 
 public class MiddleNodeFinder {
+
   public ListNode middleNode(ListNode head) {
     var current = head;
     var nodes = new ArrayList<ListNode>();

@@ -3,6 +3,7 @@ package io.github.aj8gh.leetcode.test;
 import io.github.aj8gh.leetcode.domain.ListNode;
 
 public class AbstractListNodeTest {
+
   protected static ListNode toListNode(int... digits) {
     if (digits.length == 0) {
       return null;

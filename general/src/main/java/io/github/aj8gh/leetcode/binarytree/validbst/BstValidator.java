@@ -3,6 +3,7 @@ package io.github.aj8gh.leetcode.binarytree.validbst;
 import io.github.aj8gh.leetcode.domain.TreeNode;
 
 public class BstValidator {
+
   public boolean isValidBst(TreeNode root) {
     if (getMinRight(root) > root.val) {
       return false;

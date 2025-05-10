@@ -4,6 +4,7 @@ import io.github.aj8gh.leetcode.domain.ListNode;
 import java.util.ArrayList;
 
 public class NodeRemover {
+
   public ListNode removeNthFromEnd(ListNode head, int n) {
     if (head.next == null) {
       return null;

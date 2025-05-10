@@ -4,7 +4,7 @@ public class BadVersionChecker extends VersionControl {
 
   public int firstBadVersion(int n) {
     var isBadVersion = isBadVersion(n);
-    if (isBadVersion && !isBadVersion(n -1)) {
+    if (isBadVersion && !isBadVersion(n - 1)) {
       return n;
     }
     int upper = isBadVersion ? n : Integer.MAX_VALUE;

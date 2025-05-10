@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Traverser {
+
   private final List<Integer> values = new ArrayList<>();
 
   public List<Integer> inorderTraversal(TreeNode root) {
@@ -17,14 +18,18 @@ class Traverser {
   }
 
   private void traverseLeft(TreeNode leftNode) {
-    if (leftNode == null) return;
+    if (leftNode == null) {
+      return;
+    }
     traverseLeft(leftNode.left);
     values.add(leftNode.val);
     traverseRight(leftNode.right);
   }
 
   private void traverseRight(TreeNode rightNode) {
-    if (rightNode == null) return;
+    if (rightNode == null) {
+      return;
+    }
     traverseLeft(rightNode.left);
     values.add(rightNode.val);
     traverseRight(rightNode.right);

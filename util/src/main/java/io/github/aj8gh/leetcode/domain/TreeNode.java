@@ -3,6 +3,7 @@ package io.github.aj8gh.leetcode.domain;
 import java.util.Objects;
 
 public class TreeNode {
+
   public int val;
   public TreeNode left;
   public TreeNode right;

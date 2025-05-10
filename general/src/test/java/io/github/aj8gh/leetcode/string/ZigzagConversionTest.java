@@ -17,11 +17,11 @@ class ZigzagConversionTest {
     );
   }
 
-//  P A Y P A L I S H I R I N G
-//  P A H N A P L S I I G Y I R
+  //  P A Y P A L I S H I R I N G
+  //  P A H N A P L S I I G Y I R
 
-//  P A Y P A L I S H I R I N G
-//  P I N A L S I G Y A H R P I
+  //  P A Y P A L I S H I R I N G
+  //  P I N A L S I G Y A H R P I
 
   @Disabled
   @ParameterizedTest

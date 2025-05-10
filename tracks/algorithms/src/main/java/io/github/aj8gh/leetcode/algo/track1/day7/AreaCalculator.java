@@ -31,7 +31,7 @@ public class AreaCalculator {
       int newI = neighbour[0];
       int newJ = neighbour[1];
       if (inBounds(newI, newJ, grid) && grid[newI][newJ] == 1) {
-          exploreIsland(newI, newJ, grid);
+        exploreIsland(newI, newJ, grid);
       }
     }
     maxSize = Math.max(maxSize, currentSize);

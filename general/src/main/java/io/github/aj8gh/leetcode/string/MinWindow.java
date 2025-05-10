@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MinWindow {
+
   String result = "";
 
   public String minWindow(String s, String t) {

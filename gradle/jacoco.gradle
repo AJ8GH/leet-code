@@ -1,0 +1,47 @@
+apply plugin: 'jacoco-report-aggregation'
+
+def static jacocoExcludes() {
+  return [
+//      '**/model/*'
+  ]
+}
+
+tasks.named('check') {
+  dependsOn tasks.named('testCodeCoverageReport', JacocoReport)
+}
+
+//tasks.named('testCodeCoverageReport') {
+//  dependsOn tasks.named('compileQuarkusGeneratedSourcesJava')
+//}
+
+testCodeCoverageReport {
+  afterEvaluate {
+    classDirectories.setFrom(files(classDirectories.files.collect {
+      fileTree(dir: it, exclude: jacocoExcludes())
+    }))
+  }
+}
+
+subprojects {
+  apply plugin: 'jacoco'
+
+  jacocoTestReport {
+    dependsOn test
+    afterEvaluate {
+      classDirectories.setFrom(files(classDirectories.files.collect {
+        fileTree(dir: it, exclude: jacocoExcludes())
+      }))
+    }
+  }
+
+  jacocoTestCoverageVerification {
+    violationRules {
+      rule {
+        limit {
+          minimum = new BigDecimal(minimumCoverage)
+        }
+      }
+      setFailOnViolation(Boolean.valueOf(shouldFailOnViolation))
+    }
+  }
+}

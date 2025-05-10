@@ -11,14 +11,14 @@ class InsertSearcherTest {
 
   private static Stream<Arguments> inputProvider() {
     return Stream.of(
-        Arguments.of(new int[]{1, 3, 5, 6}, 5, 2),
-        Arguments.of(new int[]{1, 3, 5, 6}, 2, 1),
-        Arguments.of(new int[]{1, 3, 5, 6}, 7, 4),
-        Arguments.of(new int[]{1, 3}, 2, 1),
-        Arguments.of(new int[]{1, 3}, 1, 0),
-        Arguments.of(new int[]{1, 3, 5}, 4, 2),
-        Arguments.of(new int[]{1, 3, 5}, 1, 0),
-        Arguments.of(new int[]{1, 3, 5}, 5, 2)
+        Arguments.of(new int[] {1, 3, 5, 6}, 5, 2),
+        Arguments.of(new int[] {1, 3, 5, 6}, 2, 1),
+        Arguments.of(new int[] {1, 3, 5, 6}, 7, 4),
+        Arguments.of(new int[] {1, 3}, 2, 1),
+        Arguments.of(new int[] {1, 3}, 1, 0),
+        Arguments.of(new int[] {1, 3, 5}, 4, 2),
+        Arguments.of(new int[] {1, 3, 5}, 1, 0),
+        Arguments.of(new int[] {1, 3, 5}, 5, 2)
     );
   }
 
