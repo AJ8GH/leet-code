@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class Solution {
 
-  public boolean hasDuplicate(int[] nums) {
+  public boolean solve(int[] nums) {
     var found = new HashSet<Integer>();
     for (var n : nums) {
       if (found.contains(n)) {

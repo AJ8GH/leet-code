@@ -1,4 +1,4 @@
-package io.github.aj8gh.leetcode.blind75.easy.containsduplicate;
+package io.github.aj8gh.leetcode.blind75.easy.validanagram;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -13,14 +13,14 @@ class SolutionTest {
 
   private static Stream<Arguments> scenarios() {
     return Stream.of(
-        Arguments.of(new int[] {1, 2, 3, 4}, false),
-        Arguments.of(new int[] {1, 2, 3, 3}, true));
+        Arguments.of("racecar", "carrace", true),
+        Arguments.of("jar", "jam", false));
   }
 
   @ParameterizedTest
   @MethodSource("scenarios")
-  void test(int[] nums, boolean expected) {
-    var actual = subject.solve(nums);
+  void test(String s, String t, boolean expected) {
+    var actual = subject.solve(s, t);
     assertThat(actual).isEqualTo(expected);
   }
 }
