@@ -1,6 +1,6 @@
 package io.github.aj8gh.leetcode.test;
 
-import io.github.aj8gh.leetcode.domain.TreeNode;
+import io.github.aj8gh.leetcode.model.TreeNode;
 
 public class AbstractTreeNodeTest {
 

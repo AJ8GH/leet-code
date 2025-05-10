@@ -11,4 +11,5 @@
   <suppress checks="AbbreviationAsWordInName" files="MergeKSortedLists.java" />
   <suppress checks="AbbreviationAsWordInName" files="NodeSwapper.java" />
   <suppress checks="LineLength" files="MinWindowTest.java" />
+  <suppress checks="LineLength" files="PermutationCheckerTest.java" />
 </suppressions>

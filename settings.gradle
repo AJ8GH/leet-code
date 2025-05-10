@@ -1,11 +1,10 @@
 pluginManagement {
   plugins {
-//    id 'org.kordamp.gradle.jandex' version jandexVersion
   }
 }
 
 rootProject.name = 'leet-code'
 
-include 'general'
+include 'puzzles'
 include 'tracks'
 include 'util'

@@ -26,10 +26,4 @@ allprojects {
   compileTestJava {
     options.encoding = 'UTF-8'
   }
-
-//  tasks.configureEach {
-//    if (Set.of('quarkusDependenciesBuild', 'checkstyleMain').contains(it.getName())) {
-//      dependsOn tasks.named('jandex')
-//    }
-//  }
 }

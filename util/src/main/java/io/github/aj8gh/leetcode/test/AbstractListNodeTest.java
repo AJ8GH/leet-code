@@ -1,6 +1,6 @@
 package io.github.aj8gh.leetcode.test;
 
-import io.github.aj8gh.leetcode.domain.ListNode;
+import io.github.aj8gh.leetcode.model.ListNode;
 
 public class AbstractListNodeTest {
 
