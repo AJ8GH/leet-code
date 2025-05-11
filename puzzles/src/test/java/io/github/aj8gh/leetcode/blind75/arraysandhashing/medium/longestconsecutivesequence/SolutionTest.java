@@ -25,4 +25,11 @@ class SolutionTest {
     var actual = subject.solve(nums);
     assertThat(actual).isEqualTo(expected);
   }
+
+  @ParameterizedTest
+  @MethodSource("scenarios")
+  void testRefactored(int[] nums, int expected) {
+    var actual = subject.solveRefactored(nums);
+    assertThat(actual).isEqualTo(expected);
+  }
 }
