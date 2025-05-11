@@ -22,6 +22,6 @@ class SolutionTest {
   @MethodSource("scenarios")
   void test(int[] nums, int target, int[] expected) {
     var actual = subject.solve(nums, target);
-    assertThat(actual).isEqualTo(expected);
+    assertThat(actual).containsExactlyInAnyOrder(expected);
   }
 }
