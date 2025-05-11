@@ -1,7 +1,8 @@
-package io.github.aj8gh.leetcode.blind75.twopointers.easy.validpalindrome;
+package io.github.aj8gh.leetcode.blind75.twopointers.medium.threesum;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.List;
 import java.util.stream.Stream;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -13,15 +14,14 @@ class SolutionTest {
 
   private static Stream<Arguments> scenarios() {
     return Stream.of(
-        Arguments.of("A man, a plan, a canal: Panama!", true),
-        Arguments.of("Was it a car or a cat I saw?", true),
-        Arguments.of("tab a cat", false));
+        Arguments.of(new int[] {-1, 0, 1, 2, -1, -4}, List.of(List.of(-1, -1, 2), List.of(-1, 0, 1))),
+        Arguments.of(new int[] {0, 1, 1}, List.of()));
   }
 
   @ParameterizedTest
   @MethodSource("scenarios")
-  void test(String s, boolean expected) {
-    var actual = subject.solve(s);
+  void test(int[] nums, List<List<Integer>> expected) {
+    var actual = subject.solve(nums);
     assertThat(actual).isEqualTo(expected);
   }
 }
