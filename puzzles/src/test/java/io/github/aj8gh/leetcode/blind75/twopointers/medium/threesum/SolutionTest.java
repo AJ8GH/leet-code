@@ -22,6 +22,11 @@ class SolutionTest {
   @MethodSource("scenarios")
   void test(int[] nums, List<List<Integer>> expected) {
     var actual = subject.solve(nums);
-    assertThat(actual).isEqualTo(expected);
+    assertThat(actual.stream()
+        .map(l -> l.stream().sorted().toList())
+        .toList())
+        .containsExactlyInAnyOrderElementsOf(expected.stream()
+            .map(l -> l.stream().sorted().toList())
+            .toList());
   }
 }
