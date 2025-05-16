@@ -6,5 +6,4 @@ pluginManagement {
 rootProject.name = 'leet-code'
 
 include 'puzzles'
-include 'tracks'
 include 'util'

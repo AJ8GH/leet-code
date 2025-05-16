@@ -20,10 +20,10 @@ allprojects {
   }
 
   compileJava {
-    options.encoding = 'UTF-8'
+    options.encoding = compileEncoding
   }
 
   compileTestJava {
-    options.encoding = 'UTF-8'
+    options.encoding = compileEncoding
   }
 }

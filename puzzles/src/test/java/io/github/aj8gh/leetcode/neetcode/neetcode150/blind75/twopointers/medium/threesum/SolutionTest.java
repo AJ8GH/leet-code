@@ -25,6 +25,7 @@ class SolutionTest {
     assertThat(actual.stream()
         .map(l -> l.stream().sorted().toList())
         .toList())
+        .hasSameSizeAs(expected)
         .containsExactlyInAnyOrderElementsOf(expected.stream()
             .map(l -> l.stream().sorted().toList())
             .toList());
