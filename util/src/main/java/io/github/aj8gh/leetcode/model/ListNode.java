@@ -1,10 +1,9 @@
 package io.github.aj8gh.leetcode.model;
 
+import java.util.HashMap;
 import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 public class ListNode {
@@ -30,13 +29,37 @@ public class ListNode {
     return head;
   }
 
+  public ListNode withCycleAtIndex(int k) {
+    var i = 0;
+    var current = this;
+    var startOfCycle = this;
+    while (current.next != null) {
+      if (i == k) {
+        startOfCycle = current;
+      }
+      current = current.next;
+      i++;
+    }
+    current.next = startOfCycle;
+    return this;
+  }
+
   @Override
   public String toString() {
+    var nodes = new HashMap<ListNode, Integer>();
+    nodes.put(this, 0);
     var s = new StringBuilder("[").append(val);
     var current = next;
+    var i = 1;
     while (current != null) {
-      s.append(",").append(current.val);
+      if (nodes.containsKey(current)) {
+        s.append(" -> cycle to index {%d}".formatted(nodes.get(current)));
+        break;
+      }
+      nodes.put(current, i);
+      s.append(", ").append(current.val);
       current = current.next;
+      i++;
     }
     return s.append("]").toString();
   }
