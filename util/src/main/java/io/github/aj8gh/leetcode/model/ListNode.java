@@ -1,6 +1,8 @@
 package io.github.aj8gh.leetcode.model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
@@ -42,6 +44,16 @@ public class ListNode {
     }
     current.next = startOfCycle;
     return this;
+  }
+
+  public List<Integer> toList() {
+    var current = this;
+    var list = new ArrayList<Integer>();
+    while (current != null) {
+      list.add(current.val);
+      current = current.next;
+    }
+    return list;
   }
 
   @Override

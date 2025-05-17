@@ -9,12 +9,12 @@ public class Solution {
       return null;
     }
 
-    var tail = head;
-    while (tail.next != null) {
-      var next = tail.next;
-      tail.next = tail.next.next;
-      next.next = head;
-      head = next;
+    var originalHead = head;
+    while (originalHead.next != null) {
+      var newHead = originalHead.next;
+      originalHead.next = originalHead.next.next;
+      newHead.next = head;
+      head = newHead;
     }
     return head;
   }

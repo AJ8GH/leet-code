@@ -29,6 +29,6 @@ class MiddleNodeFinderTest extends AbstractListNodeTest {
   void middleNode(ListNode head, ListNode expected) {
     var middleNodeFinder = new MiddleNodeFinder();
     var actual = middleNodeFinder.middleNode(head);
-    assertEquals(expected, actual);
+    assertEquals(expected.toList(), actual.toList());
   }
 }

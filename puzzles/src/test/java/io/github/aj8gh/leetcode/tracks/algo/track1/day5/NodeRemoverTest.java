@@ -22,9 +22,11 @@ class NodeRemoverTest extends AbstractListNodeTest {
 
   @ParameterizedTest
   @MethodSource("inputProvider")
-  void removeNthNodeFromEnd(ListNode head, int n, ListNode expectedOutput) {
+  void removeNthNodeFromEnd(ListNode head, int n, ListNode expected) {
     var nodeRemover = new NodeRemover();
-    var actualOutput = nodeRemover.removeNthFromEnd(head, n);
-    assertEquals(expectedOutput, actualOutput);
+    var actual = nodeRemover.removeNthFromEnd(head, n);
+    assertEquals(
+        expected == null ? null : expected.toList(),
+        actual == null ? null : actual.toList());
   }
 }

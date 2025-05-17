@@ -38,6 +38,6 @@ class ListNodeNumberAdderTest extends AbstractListNodeTest {
   void addTwoNumbers(ListNode l1, ListNode l2, ListNode expected) {
     var numberAdder = new NumberAdder();
     var actual = numberAdder.addTwoNumbers(l1, l2);
-    assertEquals(expected, actual);
+    assertEquals(expected.toList(), actual.toList());
   }
 }

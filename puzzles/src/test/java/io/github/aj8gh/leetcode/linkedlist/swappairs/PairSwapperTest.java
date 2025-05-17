@@ -19,9 +19,9 @@ class PairSwapperTest extends AbstractListNodeTest {
 
   @ParameterizedTest
   @MethodSource("inputProvider")
-  void swapPairs(ListNode head, ListNode expectedOutput) {
+  void swapPairs(ListNode head, ListNode expected) {
     var pairSwapper = new PairSwapper();
-    var actualOutput = pairSwapper.swapPairs(head);
-    assertEquals(expectedOutput, actualOutput);
+    var actual = pairSwapper.swapPairs(head);
+    assertEquals(expected.toList(), actual.toList());
   }
 }

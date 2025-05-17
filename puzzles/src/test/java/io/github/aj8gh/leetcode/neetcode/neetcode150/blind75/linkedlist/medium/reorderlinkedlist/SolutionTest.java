@@ -22,6 +22,6 @@ class SolutionTest {
   @MethodSource("scenarios")
   void test(ListNode head, ListNode expected) {
     subject.solve(head);
-    assertThat(head).isEqualTo(expected);
+    assertThat(head.toList()).isEqualTo(expected.toList());
   }
 }
