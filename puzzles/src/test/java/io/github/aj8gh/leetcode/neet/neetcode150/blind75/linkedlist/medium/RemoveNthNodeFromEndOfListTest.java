@@ -19,7 +19,9 @@ class RemoveNthNodeFromEndOfListTest {
         Arguments.of(ListNode.of(1, 2, 3, 4), 4, ListNode.of(2, 3, 4)),
         Arguments.of(ListNode.of(5), 1, null),
         Arguments.of(ListNode.of(5), 1, null),
-        Arguments.of(ListNode.of(1, 2), 2, ListNode.of(2)));
+        Arguments.of(ListNode.of(1, 2), 2, ListNode.of(2)),
+        Arguments.of(ListNode.of(1, 2), 1, ListNode.of(1)),
+        Arguments.of(ListNode.of(1, 2, 3), 2, ListNode.of(1, 3)));
   }
 
   @ParameterizedTest

@@ -9,21 +9,23 @@ public class RemoveNthNodeFromEndOfList {
       return null;
     }
 
-    var size = 0;
-    for (var current = head; current != null; current = current.next) {
-      size++;
+    var i = 0;
+    var first = head;
+    for (var second = head; second != null; second = second.next) {
+      if (++i > n + 1) {
+        first = first.next;
+      }
     }
-    if (n == size) {
+
+    if (first == head) {
+      if (n == 1 && i > 1) {
+        head.next = null;
+        return head;
+      }
       return head.next;
     }
 
-    var current = head;
-    ListNode previous = null;
-    for (var j = 0; j < size - n; j++) {
-      previous = current;
-      current = current.next;
-    }
-    previous.next = current.next;
+    first.next = first.next.next;
     return head;
   }
 }
