@@ -15,6 +15,13 @@ class MaximumSubArrayTest {
     return Stream.of(
         Arguments.of(new int[] {2, -3, 4, -2, 2, 1, -1, 4}, 8),
         Arguments.of(new int[] {-2, 1, -3, 4, -1, 2, 1, -5, 4}, 6),
+        Arguments.of(new int[] {-2, 1, -3, 100, -1, -2, 100, -5, 4}, 197),
+        Arguments.of(new int[] {-2, 1, -3, 100, -1, -300, -2, 100, -5, 4}, 100),
+        Arguments.of(new int[] {-2, 1, -3, 100, -1, -2, 99, 99, -5, 4}, 295),
+        Arguments.of(new int[] {-2, 1, -3, 100, -1, -99, -2, 99, 99, -5, 4}, 198),
+        Arguments.of(new int[] {-2, 1, -3, 10, -1, -2, 1, 1, 1, 2, 1, -14}, 13),
+        Arguments.of(new int[] {-2, -1, -3, -10, -1, -2}, -1),
+        Arguments.of(new int[] {-2, -1, -3, -10, 1, -2}, 1),
         Arguments.of(new int[] {1, -1, 1}, 1),
         Arguments.of(new int[] {-1}, -1));
   }
