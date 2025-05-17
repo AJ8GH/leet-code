@@ -2,12 +2,13 @@ package io.github.aj8gh.leetcode.neetcode.neetcode150.blind75.twopointers.medium
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 public class Solution {
 
   public List<List<Integer>> solve(int[] nums) {
-    var out = new ArrayList<List<Integer>>();
+    var out = new HashSet<List<Integer>>();
     Arrays.sort(nums);
     for (int i = 0; i < nums.length; i++) {
       var n = nums[i];
@@ -25,11 +26,12 @@ public class Solution {
         }
         if (j < k && sum == target) {
           out.add(List.of(n, nums[j], nums[k]));
-          break;
+          j++;
+          k--;
         }
       }
     }
 
-    return out;
+    return new ArrayList<>(out);
   }
 }
