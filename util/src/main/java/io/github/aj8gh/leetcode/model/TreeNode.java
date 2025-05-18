@@ -9,7 +9,7 @@ public class TreeNode {
   public TreeNode left;
   public TreeNode right;
 
-  public static TreeNode from(int... nums) {
+  public static TreeNode from(Integer... nums) {
     if (nums == null || nums.length == 0) {
       return null;
     }
@@ -21,12 +21,16 @@ public class TreeNode {
     while (!nodes.isEmpty() && i < nums.length) {
       var node = nodes.pop();
       var leftVal = nums[i++];
-      node.left = new TreeNode(leftVal);
-      nodes.addLast(node.left);
+      node.left = leftVal == null ? null : new TreeNode(leftVal);
+      if (node.left != null) {
+        nodes.addLast(node.left);
+      }
       if (i < nums.length) {
         var rightVal = nums[i++];
-        node.right = new TreeNode(rightVal);
-        nodes.addLast(node.right);
+        node.right = rightVal == null ? null : new TreeNode(rightVal);
+        if (node.right != null) {
+          nodes.addLast(node.right);
+        }
       }
     }
 
