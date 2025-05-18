@@ -26,4 +26,18 @@ public class InvertBinaryTree {
 
     return root;
   }
+
+  public TreeNode solveRecursively(TreeNode root) {
+    if (root == null) {
+      return null;
+    }
+
+    var right = root.right;
+    root.right = root.left;
+    root.left = right;
+    solveRecursively(root.left);
+    solveRecursively(root.right);
+
+    return root;
+  }
 }
