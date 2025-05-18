@@ -26,4 +26,11 @@ class MaximumDepthOfBinaryTreeTest {
     var actual = subject.solve(root);
     assertThat(actual).isEqualTo(expected);
   }
+
+  @ParameterizedTest
+  @MethodSource("scenarios")
+  void testRecursive(TreeNode root, int expected) {
+    var actual = subject.solveRecursively(root);
+    assertThat(actual).isEqualTo(expected);
+  }
 }

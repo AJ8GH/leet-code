@@ -29,4 +29,20 @@ public class MaximumDepthOfBinaryTree {
     }
     return depth;
   }
+
+  public int solveRecursively(TreeNode root) {
+    if (root == null) {
+      return 0;
+    }
+
+    return getDepth(root, 0);
+  }
+
+  private int getDepth(TreeNode node, int depth) {
+    if (node == null) {
+      return depth;
+    }
+
+    return 1 + Math.max(getDepth(node.left, depth), getDepth(node.right, depth));
+  }
 }
