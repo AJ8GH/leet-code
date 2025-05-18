@@ -1,4 +1,4 @@
-package io.github.aj8gh.leetcode.neet.neetcode150.blind75.dynamicprogramming.oned.medium;
+package io.github.aj8gh.leetcode.neet.neetcode150.blind75.dynamicprogramming.onedimention.medium;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -19,6 +19,8 @@ class MaximumProductSubArrayTest {
         Arguments.of(new int[] {-4, 1, -3, 1, -2, 10}, 60),
         Arguments.of(new int[] {-2, 0, -1}, 0),
         Arguments.of(new int[] {-2}, -2),
+        Arguments.of(new int[] {-1, -2, -9, -6}, 108),
+        Arguments.of(new int[] {2, -5, -2, -4, 3}, 24),
         Arguments.of(new int[] {-2, 3, -4}, 24));
   }
 
