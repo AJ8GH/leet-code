@@ -3,6 +3,7 @@ package io.github.aj8gh.leetcode.neet.neetcode150.blind75.linkedlist.easy;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 import io.github.aj8gh.leetcode.model.ListNode;
+import java.util.ArrayList;
 import java.util.stream.Stream;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
