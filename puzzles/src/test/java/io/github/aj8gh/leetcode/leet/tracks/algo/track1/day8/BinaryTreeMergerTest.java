@@ -1,15 +1,15 @@
 package io.github.aj8gh.leetcode.leet.tracks.algo.track1.day8;
 
+import static io.github.aj8gh.leetcode.helper.TreeNodeHelper.tn;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import io.github.aj8gh.leetcode.model.TreeNode;
-import io.github.aj8gh.leetcode.test.AbstractTreeNodeTest;
 import java.util.stream.Stream;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-class BinaryTreeMergerTest extends AbstractTreeNodeTest {
+class BinaryTreeMergerTest {
 
   private static Stream<Arguments> inputProvider() {
     return Stream.of(

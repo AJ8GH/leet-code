@@ -1,15 +1,15 @@
 package io.github.aj8gh.leetcode.leet.linkedlist.swappairs;
 
+import static io.github.aj8gh.leetcode.helper.ListNodeHelper.toListNode;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import io.github.aj8gh.leetcode.model.ListNode;
-import io.github.aj8gh.leetcode.test.AbstractListNodeTest;
 import java.util.stream.Stream;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-class PairSwapperTest extends AbstractListNodeTest {
+class PairSwapperTest {
 
   private static Stream<Arguments> inputProvider() {
     return Stream.of(

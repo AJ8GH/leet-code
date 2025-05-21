@@ -1,10 +1,12 @@
-package io.github.aj8gh.leetcode.test;
+package io.github.aj8gh.leetcode.helper;
 
 import io.github.aj8gh.leetcode.model.ListNode;
+import lombok.experimental.UtilityClass;
 
-public class AbstractListNodeTest {
+@UtilityClass
+public class ListNodeHelper {
 
-  protected static ListNode toListNode(int... digits) {
+  public static ListNode toListNode(int... digits) {
     if (digits.length == 0) {
       return null;
     }

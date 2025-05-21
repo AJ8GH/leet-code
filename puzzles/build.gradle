@@ -1,3 +1,4 @@
 dependencies {
   implementation project(utilModule)
+  testImplementation project(utilModule)
 }
